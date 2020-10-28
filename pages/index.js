@@ -1,6 +1,10 @@
 import styles from '../styles.module.css'
 import Image from 'next/image'
 
+fuction getRandomWidth() {
+  return Math.floor(Math.random() * 2000);
+}
+
 const Code = (p) => <code className={styles.inlineCode} {...p} />
 
 const Index = () => (
@@ -28,7 +32,7 @@ const Index = () => (
         Notice that the image is responsive. As you adjust your browser width, a
         different sized image is loaded.
       </p>
-      <Image alt="Vercel logo" src="/vercel.png" width={1000} height={1000} />
+      <Image alt="Vercel logo" src="/vercel.png" width={getRandomWidth()} height={1000} />
       <hr className={styles.hr} />
       <p>
         The following is an example of a reference to an external image at{' '}
@@ -41,7 +45,7 @@ const Index = () => (
       <Image
         alt="Next.js logo"
         src="https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js.png"
-        width={1200}
+        width={getRandomWidth()}
         height={400}
       />
       <hr className={styles.hr} />
