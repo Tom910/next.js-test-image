@@ -5,6 +5,14 @@ function getRandomWidth() {
   return Math.floor(Math.random() * 2000);
 }
 
+function getImg(type) {
+  if (type === 'logo') {
+    return '/vercel.png'
+  }
+  
+  return 'https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js.png'
+} 
+
 const Code = (p) => <code className={styles.inlineCode} {...p} />
 
 const Index = () => (
@@ -32,7 +40,7 @@ const Index = () => (
         Notice that the image is responsive. As you adjust your browser width, a
         different sized image is loaded.
       </p>
-      <Image alt="Vercel logo" src="/vercel.png" width={getRandomWidth()} height={1000} />
+      <Image alt="Vercel logo" src={getImg('logo')} width={getRandomWidth()} height={1000} />
       <hr className={styles.hr} />
       <p>
         The following is an example of a reference to an external image at{' '}
@@ -44,7 +52,7 @@ const Index = () => (
       </p>
       <Image
         alt="Next.js logo"
-        src="https://assets.vercel.com/image/upload/v1538361091/repositories/next-js/next-js.png"
+        src={getImg('a')}
         width={getRandomWidth()}
         height={400}
       />
