@@ -40,7 +40,7 @@ const Index = () => (
         Notice that the image is responsive. As you adjust your browser width, a
         different sized image is loaded.
       </p>
-      <Image alt="Vercel logo" src={getImg('logo')} width={getRandomWidth()} height={1000} />
+      <Image alt="Vercel logo 2" src={getImg('logo')} width={getRandomWidth()} height={1000} />
       <hr className={styles.hr} />
       <p>
         The following is an example of a reference to an external image at{' '}
