@@ -1,7 +1,7 @@
 import styles from '../styles.module.css'
 import Image from 'next/image'
 
-fuction getRandomWidth() {
+function getRandomWidth() {
   return Math.floor(Math.random() * 2000);
 }
 
